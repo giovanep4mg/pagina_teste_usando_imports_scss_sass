@@ -1,0 +1,31 @@
+@import 'base1', 'base2', 'base3';
+
+$background: rgba(211, 223, 150, 0.349);
+$cor-azul: blue;
+$cor-vermelho: red;
+$borda: 1px solid black;
+$margem: 10px;
+$paddi: 10px;
+
+@mixin cores(){
+    color: $cor-azul;
+}
+@mixin marg-padd(){
+    margin: $margem;
+    padding: $paddi;
+}
+html{
+    background-color: $background;
+    font-size: 30px;
+    margin: 10px;
+    padding: 10px;
+}
+.div0 {
+    @include cores;
+    @include marg-padd;
+    border: $borda;
+    b{
+        color: $cor-vermelho;
+    }
+}
+
